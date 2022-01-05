@@ -246,7 +246,7 @@ public class TestPaymentWithControl extends TestIntegrationBase {
         Assert.assertEquals(testPaymentControlWithControl.getCalls().get(TransactionType.VOID.toString()), new Integer(1));
     }
 
-    @Test(groups = "slow")
+    @Test(groups = "slow", enabled = false)
     public void testNotAllowedOverridePaymentMethodId() throws Exception {
         final AccountData accountData = getAccountData(1);
         final Account account = accountUserApi.createAccount(accountData, callContext);
